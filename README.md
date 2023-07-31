@@ -279,3 +279,18 @@ The roles and responsibilities of an ISA:
 ## Section 12 - Types of Data on a Payment Card
 
 ![Card Diagram](Card.png)
+
+Data is broken up into 2 categories:
+**Cardholder Data**
+- Primary Account Number (PAN)
+- Cardholder name
+- Expiry date
+- Service code
+**Sensitive Authentication Data (SAD)**
+  - Full magnetic stripe data (or equivalent data on the card's chip)
+  - CVV (or CAV/CVC2/CID) number
+  - PINs/PIN blocks
+ 
+PCI DSS applies wherever any of this data is stored, processed, or transmitted.  
+Sensitive Authentication Data (SAD) must **not** be stored by the merchant after authorization.  
+Encrypting any of this data does not necessarily remove it from scope.
