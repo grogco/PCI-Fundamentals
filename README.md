@@ -167,15 +167,111 @@ Service provider levels may be determined by transaction volume or the type of s
 - Visa Europe is the same, except it counts the number of all transactions, not just visa transactions.
 
 #### Visa Inc. Validations
-- Level 1 needs and annual ROC by QSA, quarterly scans by ASV, AOC, and must be included on the Visa Global Registry of Service Providers
+- Level 1 needs an **annual ROC by a QSA**, quarterly scans by ASV, AOC, and must be included on the Visa Global Registry of Service Providers
 - Level 2 needs annual SAQ, scans, AOC, and is not included in the registry
 
 #### Visa Europe Validations
 - Level 1 needs and annual ROC by QSA, quarterly scans by ASV, AOC, registered by Visa Europe member, ARD form, and included on Visa Europe's list of PCI DSS compliant SPs
 - There is also a _Merchant Agent Programme_
 
+Service Providers also have a bunch of reporting and submission requrirements, found in each brand's instructions.
 
-  
+## Section 5 - Self-Assessment Questionnaires
+As shown in the previous sections, some merchants and service providers do not need to submit and onsite assessement, and can self-evaluate their compliance. The SAQ is a validation tool intended to assist merchants and service providers with self-evaluating their compliance with the PCI DSS. There are multiple versions of the SAQ to meet various situations.
 
+#### SAQ A
+- Used for card-not-present merchants (e-commerce, mail order, or telephone order) that outsource all cardholder data functions to PCI DSS compliant service provider
 
-   
+#### SAQ A-EP
+- For e-commerce merchants with websites that do not receive cardholder data, but directly affect the security of the payment transaction
+- To be eligable for this, every element of the website must originate from the merchant or a PCI DSS compliant service provider
+
+#### SAQ B
+- For merchants that only use imprint machines or dial-out terminals with no electronic cardholder data storage
+
+#### SAQ B-IP
+- For merchants that only use standalone, PTS approved payment terminals
+- The payment terminal must be listed on the PCI SSC website as an approved device
+- Merchants using Secure Card Reader (SCR) type devices are not eligable for this
+
+#### SAQ C
+- For merchants with dedicated application systems, segmented from all other systems, and connected to the internet for processing
+- Not applicable for e-commerce payment channels
+
+#### SAQ C-VT
+- For merchants using only web-based virtual payment terminals where cardholder data is entered manually into a secure website
+
+#### SAQ D
+- For merchants that do not fall into any other categories
+- For service providers. **Service providers always use SAQ D if they are eligable**
+
+#### SAQ P2PE
+- For merchants who have implemented a validated P2PE solution that is listed on the PCI SSC website
+
+For all SAQs other than D, all eligibility criteria must be met.
+
+## Section 6 - Payment Applications
+Applications must undergo a PA-DSS assessment if they store, process, or transmit cardholder data as part of the authorization or settlement process. Examples include POS apps, shopping carts, etc.
+
+PA-DSS ensures that apps operate in a PCI-DSS compliant manner.
+
+Use of a PA-DSS compliant app does not, on its own, make an entity PCI DSS compliant. The PA-DSS implementation guide can be used by a PCI DSS assessor to make sure that the app is being used properly.
+
+Examples of applications that PA-DSS applies to:
+- Apps sold off the shelf without much customiation by software vendors
+- Software modules that performs payment functions
+- Dedicated POS terminals/hardware terminals
+
+PA-DSS does not apply to applications made specifically for one customer, or apps developed in-house by a merchant for just their own use. PA-DSS also does not apply to apps that are not inolved in the payment process, like operating systems, databases, and back-office systems that store cardholder data.
+
+Payment apps on hardware terminals can either meet all PA-DSS requirements, or reside on a PTS-approved POI device and meet controls through the PTS standard to be PCI DSS compliant.
+
+## Section 7 - Integrators and Resellers
+Integrators and Resellers are those entities that sell, install, and/or service payment applications on behalf of software vendors or others. The Certification for Qualified Integrators and Resellers (QIRs) helps assure quality of these roles.
+
+This is important because, even though the software vendor may have developed an application which is capable of being secure, the Integrator/Reseller must ensure it is implemented properly and in a secure manner to maintain PCI DSS compliance. Furthermore, customers also have a responsibility to maintain their own PCI DSS compliance through their usage.
+
+## Section 8 - More on P2PE Solutions
+The use of a P2PE solution can reduce a merchant's PCI DSS scope if the merchant has no involvement in encryption, decryption, or key storage for transactions.
+P2PE v2.0 provides options for merchants that want to manage their own P2PE solution.
+
+Note: P2PE does not replace PCI DSS in the merchant environment. Merchants should consult with their acquirer or the payment brands about using encryption solutions not included on PCI SSC’s list of validated P2PE Solutions.
+
+## Section 9 - Qualified Security Assessors
+The roles and responsibilities of a QSA:
+- Validate the scope of the assessment
+- Conduct PCI Data Security Standard assessments
+- Verify all technical information given by merchant or service provider
+- Use independent judgement to confirm PCI DSS requirements have been met
+- Be onsite for the duration of any relevant assessment procedure -Review the work product that supports the assessment procedures
+- Adhere to the PCI DSS Requirements and Security Assessment Procedures
+- Select representative samples of business facilities and system components where sampling is employed
+- Evaluate compensating controls
+- Produce the final Report on Compliance
+
+## Section 10 - Internal Security Assessors
+ISAs are similar to QSAs, as they are responsible for validating the scope of the assessment and perform all steps as written. ISAs must verify that all controls are in place as reported.
+
+The roles and responsibilities of an ISA:
+- Validate scope of the assessment
+- Conduct PCI Data Security Standard assessments
+- Verify all technical information given by stakeholders
+- Use independent judgement to confirm requirements have been met
+- Provide support and guidance during the compliance process
+- Be onsite for the duration of any relevant assessment procedure
+- Review the work product that supports the assessment procedures
+- Adhere to the PCI DSS Requirements and Security Assessment Procedures
+- Select representative samples of business facilities and system components where sampling is employed
+- Evaluate compensating controls
+- Produce final report
+
+## Section 11 - Approved Scanning Vendors
+- Roles and responsibilities of ASVs:
+- Performing external vulnerability scans in accordance with PCI DSS Requirement 11.2, and other supplemental guidance published by the PCI SSC
+- Making reasonable efforts to ensure scans:
+- Do not impact the normal operation of the scan customer environment
+- Do not penetrate or intentionally alter the customer environment
+- Scanning all IP ranges and domains provided by scan customer to identify active IP addresses and services
+- Consulting with the scan customer to determine if IP addresses found, but not provided by the scan customer, should be included
+- Providing a determination as to whether the scan customer’s components have passed the scanning requirements
+- Providing adequate documentation to demonstrate the compliance or non-compliance of the scan customer’s components
