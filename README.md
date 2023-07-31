@@ -47,4 +47,22 @@ During a process called **settlement** the merchant bank pays the merchant for t
 A _**Service Provider**_ (SP) is a business that is not a payment brand, but controls or impacts the security of another entity's cardholder data. Some examples include transaction processors, Independent Sales Organizations (ISOs), managed firewall providers, IDS service providers, or hosting providers. SPs usually undergo their own PCI DSS assessments to demonstrate their compliance to their customers. Alternatively, a SP could have their services reviewed as part of their customers' PCI DSS assessments. _Note: Entities that only provide public network access, like a telecom company, are not considered SPs._ 
 
 
-## Section 2 - Payment Card Brands and Their Compliance Programs 
+## Section 2 - Payment Card Brands and Their Compliance Programs  
+Each of the 5 founding payment brands has their own PCI DSS compliance programs.
+- American Express: [Data Security Operating Policy (DSOP)](https://www.americanexpress.com/content/dam/amex/us/merchant/new-data-security/DSOP_Oct2020_US_EN.pdf)
+- Discover: [Discover Information Security Compliance (DISC)](https://www.discoverglobalnetwork.com/solutions/pci-compliance/discover-information-security-compliance/)
+- JCB: [Data Security Program](https://www.global.jcb/en/products/security/data-security-program/index.html)
+- MasterCard: [Site Data Protection (SDP)](https://www.mastercard.us/en-us/business/overview/safety-and-security/security-recommendations/site-data-protection-PCI.html)
+- Visa Inc: [Cardholder Information Security Program (CISP)](https://usa.visa.com/partner-with-us/pci-dss-compliance-information.html)
+- Visa Europe: [Account Information Security (AIS) Program](https://bm.visa.com/run-your-business/small-business/information-security/ais-program.html)
+Payment brand compliance programs handle compliance tracking, enforcement, and any fees that may be incurred by noncompliance. Approval and posting of compliant entities and forensic investigation and response to data breaches are other responsibilities of the payment brands. It is important to note that the PCI SSC does not do investigations or response—this is all handled by the brands.
+
+#### Merchant Levels
+Every payment brand has different definitions for different *merchant levels*. Merchant levels range from 1-4 and are determined by the Acquirer based on annual number of transactions.  
+Here is an overview of what the different merchant levels usually entail. Merchant level definitions for each payment brand are described in detail later:
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
