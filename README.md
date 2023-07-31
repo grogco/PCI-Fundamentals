@@ -61,8 +61,13 @@ Payment brand compliance programs handle compliance tracking, enforcement, and a
 Every payment brand has different definitions for different *merchant levels*. Merchant levels range from 1-4 and are determined by the Acquirer based on annual number of transactions.  
 Here is an overview of what the different merchant levels usually entail. Merchant level definitions for each payment brand are described in detail later:
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+|Merchants               | Level 1          | Level 2       | Levels 3 & 4                  |
+|------------------------|:----------------:|:-------------:|:-----------------------------:|
+| Assessment Type:       | Onsite Assessment|Self assessment|Determined by brand or acquirer|
+| Reporting Requirements:| ROC & ASV scan   |SAQ & ASV scan |Determined by brand or acquirer|
+
+|Service Providers       | Level 1          | Level 2       | Levels 3 & 4  |
+|------------------------|:----------------:|:-------------:|:-------------:|
+| Assessment Type:       | Onsite Assessment|Self assessment|Self assessment|
+| Reporting Requirements:| ROC & ASV scan   |SAQ & ASV scan |SAQ & ASV scan |
+_<sub>This is a summarized overview only - Merchants and Service Providers should consult with their acquirer or payment brand directly to understand each brand's validation criteria and reporting requirements.</sub>_
