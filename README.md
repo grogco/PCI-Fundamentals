@@ -112,3 +112,70 @@ Here are the reporting requirements for merchants (all but Visa):
 | 2     | If compliant:<br>Attestation of Compliance from the Annual Onsite Security Assessment Report<br><br>Attestation of Scan Compliance or Executive Summary of Findings of Quarterly Network Scan<br><br>If not compliant:<br>Attestation of Compliance. Including 'Part 4. Action Plan for Non-Compliant Status', and a remediation date not to exceed twelve months following the date of the AOC, for achieving compliance | Discover Merchants:<br>Attestation of Compliance for Merchants from onsite security assessment report<br> <br>If not fully compliant, must also complete the Action Plan for Non-Compliant Status section of the Attestation of Compliance<br> <br>Acquired Merchants :<br>Consult acquirer - acquirer must submit the Discover Acquirer Portfolio Compliance Status Submission Form to Discover twice per year                                   | No reporting requirements at this time<br><br><br><br><br> | Acquirers report status of all merchants quarterly<br><br>MasterCard's global compliance program requires all non-compliant merchants to report their compliance status and milestone progress via the PCI SSC's Prioritized Approach Tool         |
 | 3     | Level 3 merchants need not submit validation documentation                                                                                                                                                                                                                                                                                                                                                                | Discover Merchants:<br>Attestation of Compliance for Merchants from onsite security assessment report<br> <br>If not fully compliant, must also complete the Action Plan for Non-Compliant Status section of the Attestation of Compliance<br> <br>Acquired Merchants :<br>Consult acquirer - acquirer must submit the Discover Acquirer Portfolio Compliance Status Submission Form to Discover or (Level 4 Merchant Action Plan) twice per year | No reporting requirements at this time<br><br><br><br><br> | Acquirers report status of all merchants quarterly<br>\-MasterCard's global compliance program requires all non-compliant merchants to report their compliance status and milestone progress via the PCI SSC's Prioritized Approach Tool           |
 | 4     | No reporting requirements at this time<br><br><br><br><br>                                                                                                                                                                                                                                                                                                                                                                | Same as above                                                                                                                                                                                                                                                                                                                                                                                                                                     | No reporting requirements at this time<br><br><br><br><br> | No reporting requirements at this time<br><br><br><br><br>                                                                                                                                                                                         |
+
+Merchants may need to submit their compliance status to multiple entities. Acquirers also report compliance to payment card brands. Reporting varies for each brand:
+
+#### Acquirer Reporting to American Express
+- Annual onsite PCI assessment or an annual self-assessment (SAQ)
+- Quarterly network scans
+- Summary of compliance (SOC)
+
+  #### Acquirer Reporting to Visa
+| Merchant Level | Visa Inc.                                                                         | Visa Europe                                                                                          |
+| -------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| 1              | 2x/year statement of merchant compliance status, annual AOC, and ROC if requested | Quarterly statement of merchant compliance status, ROC if requested                                  |
+| 2              | 2x/year statement of merchant compliance status, annual AOC, and SAQ if requested | Quarterly statement of merchant compliance status, SAQ and AOC if requested                          |
+| 3              | 2x/year statement of compliance status                                            | Quarterly statement of merchant compliance status, SAQ and AOC if requested                          |
+| 4              | Set by acquirer                                                                   | Quarterly statement of merchant compliance status, SAQ and AOC for e-commerce merchants if requested |
+
+## Section 5 - Service Provider Levels and Validation
+Service provider levels may be determined by transaction volume or the type of service provided. Like merchants, compliance requirements and validation of the requirements varies by payment brand.
+
+#### American Express Levels for Service Providers
+- Level 1 processes >2.5 million Amex card transactions annually, or is any SP that Amex deems to be Level 1
+- Level 2 processes between 50k and 2.5 million Amex transactions annually
+- Level 3 processes less than 50k Amex transactions annually
+
+#### American Express Validation for Service Providers
+- Level 1 and 2 needs an annual onsite assessment by a QSA or SP that is certified by a C-level employee. Also quarterly network scans by an ASV
+- Level 3 is an annual SAQ and quarterly network scans by ASV
+
+#### Discover Levels for Service Providers
+- Level 1 stores, processes, and/or transmits >300k Discover Network card transactions annually, or is any SP that Discover deems to be Level 1
+- Level 2 stores, processes, and/or transmits <300k Discover Network card transactions annually
+
+#### Discover Validation for Service Providers
+- Level 1 SPs need an annual onsite by a QSA and quarterly scans
+- Level 2 needs an annual SAQ, quarterly scans, and non-compliant SPs must submit a Discover Action Plan
+
+#### JCB Validation for Service Providers
+- Annual onsite by QSA and quarterly network scans
+
+#### Mastercard Levels for Service Providers
+- All third party providers (TPPs) are Level 1
+- Level 1 is also all data storage entities (DSEs) storing, transmitting, or processing >300k total MasterCard and/or Maestro transactions annually
+- All compromised TPPs and DSEs are treated as Level 1
+- Level 2 is all data storage entities (DSEs) storing, transmitting, or processing <300k total MasterCard and/or Maestro transactions annually
+
+#### Mastercard Validation for Service Providers
+- Level 1 annual onsite by QSA & scans
+- Level 2 annual SAQ, scans, non-compliant must submit a MasterCard Action Plan
+
+#### And now for Visa
+- Any SP storing, transmitting, or processing >300k Visa transactions annually is Level 1 for Visa Inc.
+- Less thank 300k is Level 2
+- Visa Europe is the same, except it counts the number of all transactions, not just visa transactions.
+
+#### Visa Inc. Validations
+- Level 1 needs and annual ROC by QSA, quarterly scans by ASV, AOC, and must be included on the Visa Global Registry of Service Providers
+- Level 2 needs annual SAQ, scans, AOC, and is not included in the registry
+
+#### Visa Europe Validations
+- Level 1 needs and annual ROC by QSA, quarterly scans by ASV, AOC, registered by Visa Europe member, ARD form, and included on Visa Europe's list of PCI DSS compliant SPs
+- There is also a _Merchant Agent Programme_
+
+
+  
+
+
+   
