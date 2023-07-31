@@ -58,7 +58,22 @@ Each of the 5 founding payment brands has their own PCI DSS compliance programs.
 Payment brand compliance programs handle compliance tracking, enforcement, and any fees that may be incurred by noncompliance. Approval and posting of compliant entities and forensic investigation and response to data breaches are other responsibilities of the payment brands. It is important to note that the PCI SSC does not do investigations or response—this is all handled by the brands.
 
 #### Merchant Levels
-Every payment brand has different definitions for different *merchant levels*. Merchant levels range from 1-4 and are determined by the Acquirer based on annual number of transactions.  
+Every payment brand has different definitions for different *merchant levels*. Merchant levels range from 1-4 and are determined by the Acquirer based on annual number of transactions.
+
+This is how merchant levels are defined by each payment brand:
+
+| Level | American Express                                                                                                                                      | Discover                                                                                                                                                                                                                            | JCB                                                                                         | MasterCard                                                                                                                                                                                                                                                                          |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | *   Merchants processing over 2.5 million American Express card transactions annually or any merchant that American Express otherwise deems a Level 1 | *   Merchants processing over 6 million card transactions annually on the Discover network
+*   Any merchant Discover determines to be a Level 1
+*   Merchants required by another payment brand to validate and report as a Level 1 | *   Merchants processing over 1 million JCB transactions annually, or compromised merchants | *   Merchants processing over 6 million total combined MasterCard and Maestro transactions annually
+*   Merchants that have experienced an account data compromise
+*   Any merchant that MasterCard otherwise deems a Level 1
+*   Any merchant meeting the Level 1 criteria of Visa |
+| 2     | *   Merchants processing 50,000 to 2.5 million American Express transactions annually                                                                 | *   Merchants processing 1 million to 6 million card transactions annually on the Discover network
+*   Merchants required by another payment brand to validate and report as a Level 2 merchant                                     | *   Merchants processing less than 1 million JCB transactions annually                      | *   Merchants with greater than 1 million but less than or equal to 6 million total combined MasterCard and Maestro transactions annually
+*   Any merchant meeting the Level 2 criteria of Visa                                                                                     |
+
 Here is an overview of what the different merchant levels usually entail. Merchant level definitions for each payment brand are described in detail later:
 
 |Merchants               | Level 1          | Level 2       | Levels 3 & 4                  |
