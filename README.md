@@ -70,4 +70,5 @@ Here is an overview of what the different merchant levels usually entail. Mercha
 |------------------------|:----------------:|:-------------:|:-------------:|
 | Assessment Type:       | Onsite Assessment|Self assessment|Self assessment|
 | Reporting Requirements:| ROC & ASV scan   |SAQ & ASV scan |SAQ & ASV scan |
+
 _<sub>This is a summarized overview only - Merchants and Service Providers should consult with their acquirer or payment brand directly to understand each brand's validation criteria and reporting requirements.</sub>_
