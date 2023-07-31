@@ -227,7 +227,7 @@ PA-DSS does not apply to applications made specifically for one customer, or app
 Payment apps on hardware terminals can either meet all PA-DSS requirements, or reside on a PTS-approved POI device and meet controls through the PTS standard to be PCI DSS compliant.
 
 ## Section 7 - Integrators and Resellers
-Integrators and Resellers are those entities that sell, install, and/or service payment applications on behalf of software vendors or others. The Certification for Qualified Integrators and Resellers (QIRs) helps assure quality of these roles.
+Integrators and Resellers are those entities that sell, install, and/or service payment applications on behalf of software vendors or others. The Certification for Qualified Integrators and Resellers (QIRs) helps assure quality of these roles. QIRs provide their customers with a completed implementation statement after installation, including documentation of any potential risks to PCI DSS compliance.
 
 This is important because, even though the software vendor may have developed an application which is capable of being secure, the Integrator/Reseller must ensure it is implemented properly and in a secure manner to maintain PCI DSS compliance. Furthermore, customers also have a responsibility to maintain their own PCI DSS compliance through their usage.
 
@@ -275,3 +275,7 @@ The roles and responsibilities of an ISA:
 - Consulting with the scan customer to determine if IP addresses found, but not provided by the scan customer, should be included
 - Providing a determination as to whether the scan customer’s components have passed the scanning requirements
 - Providing adequate documentation to demonstrate the compliance or non-compliance of the scan customer’s components
+
+## Section 12 - Types of Data on a Payment Card
+
+![Card Diagram](Card.png)
