@@ -2,6 +2,8 @@
 My notes for PCI DSS 3.2 training (July 2023)  
 <sub>_Please do not take this as an authoritative source for PCI DSS, these are just my notes._</sub>
 
+![PCI Logo](/assets/images/PCI-Logo.png)
+
 ## Section 1 - Background
 Payment cards are consistently one of the most highly stolen types of data. This is commonly seen done with credit card skimming devices, exploitation of outdated software, malware, or stolen credentials. According to the Verizon Data Breach Investigations Report of 2017, "“95% of breaches featuring the use of stolen credentials leveraged vendor remote access to hack into their customer’s POS [point-of-sales] environments".  
 
