@@ -2,6 +2,8 @@
 My notes for PCI DSS 3.2 training (July 2023)  
 <sub>_Please do not take this as an authoritative source for PCI DSS, these are just my notes._</sub>
 
+Link to the PCI 3.2.1 Quick Reference Guide: [https://www.pcisecuritystandards.org/pdfs/pci_ssc_quick_guide.pdf](https://www.pcisecuritystandards.org/pdfs/pci_ssc_quick_guide.pdf)
+
 ![PCI Logo](Logo.png)
 
 ## Section 1 - Background
