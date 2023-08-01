@@ -372,3 +372,94 @@ Entities involved in payment card processing via mobile devices can reduce the r
 ## Section 15 - PCI DSS v3.2.1 Six Goals & Twelve Requirements
 
 ![6 Goals 12 Requirements](goals-n-reqs.png)
+
+All requirements are laid out in detail in the assessment template [https://www.pcisecuritystandards.org/documents/PCI-DSS-v3_2_1-ROC-Reporting-Template.pdf](https://www.pcisecuritystandards.org/documents/PCI-DSS-v3_2_1-ROC-Reporting-Template.pdf)
+
+Summaries of each requirement:
+
+#### Requirement 1
+Install and maintain a firewall configuration to protect cardholder data
+- Install personal firewalls and network firewalls
+- Also have processes for approving/testing firewall policies
+- Make sure everything is diagrammed and roles/responsibilities are defined
+- Review firewall and router rules at least every **six months**
+
+#### Requirement 2
+Do not use vendor-supplied defaults for system passwords and other security parameters
+- Develop configuration standards for all system components
+- Separate functions, e.g., web, database, and DNS should be implemented on different servers
+- Use strong cryptography to encrypt all non-console administrative access
+
+#### Requirement 3
+Protect stored cardholder data ("If you don't need it, don't store it!")
+- Don't store SAD, even if encrypted (unless you have a business justification and the data is stored securely)
+- Don't store the full contents of any track (or chip), PIN, or CVC after authorization
+- Mask the PAN when it's deiplayed (show only the first 6 or last 4 digits)
+- Document all key-management processes
+
+#### Requirement 4
+Encrypt transmission of cardholder data across open, public networks
+- Early TLS is not considered strong
+
+#### Requirement 5
+Protect all systems against malware and regiularly update anti-virus software or programs
+- Systems that are not considered to be commonly affected by malware are exempt from anti-virus, but should be audited periodically
+
+#### Requirement 6
+Develop and maintain secure systems and applications
+- Patch systems, use SDLC, code reviews, and change control
+- Protect against common app/webapp vulnerabilities
+
+#### Requirement 7
+Restrict access to cardholder data by business need-to-know
+- Minimum access
+- Access control should deny all by default, explicit allow
+
+#### Requirement 8
+Identify and authenticate access to system components
+- passwords must have >7 characters and be alphanumeric
+- Change passwords every 90 days, do not allow a repeat of the previous 4 passwords used
+- No group/shared passwords
+
+#### Requirement 9
+Restrict physical access to cardholder data
+- Visitors
+
+#### Requirement 10
+Track and moitor all access to network resources and cardholder data
+- Audit trails must track a variety of specified data
+- Retain audit trail history for at least one year, with a minimum of 3 months immediately available for analysis
+- Service providers have additional reqiurements
+
+#### Requirement 11
+Regularly test security systems and processes
+- Quarterly internal and external vulnerabilty scans are required (external must be done by an ASV)
+- Have a penetration testing methodology
+
+#### Requirement 12
+Maintain a policy that addresses information security for all personnel
+- personnel must acknowledge at least annually that they have read and understood the security policies and procedures
+
+#### Appendix A1: Additional PCI DSS Requirements for Shared Hosting Providers
+Requirements on how each entity (merchant, service provider, etc.) must protect the hosted environment and data
+- Each entity only runs processes that have access to their own cardholder data environment
+- Restrict access to privileges
+- Logs should be available in a shared environment
+- Processes should facilitate timely forensic investigation
+
+#### Appendix A2: Additional PCI DSS Requirements for Entities using SSL/early TLS
+SSL and early TLS must not be used as a security control, except in the case of POS POI terminal connections that need it and can be verified as not being susceptable to any known exploits
+
+#### Appendix A3: Designated Entities Supplemental Validation (DESV)
+Only applies if an acquirer or payment brand requires an assessment to be done
+
+## Section 16 - Information Supplements
+There are various information supplements on the PCI SSC website.  
+Supplements provided by the SSC do not supercede PCI DSS requirements.
+
+## Section 17 - The Prioritized Approach
+The Prioritized Approach reorganizes the PCI DSS requirements into six security milestones as listed below:
+
+![Prioritized Approach](pri-approach.png)
+
+
