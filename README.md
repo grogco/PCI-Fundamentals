@@ -472,3 +472,23 @@ PCI DSS requires detailed documentation in the Report on Compliance. The assesso
  - Details of ROC items marked as being “in place” must not conflict with requirements
  - Items to be remediated cannot be marked in place until they are implemented and revalidated
  - Attestation of Compliance (AOC) forms should accompany the completed report, in accordance with either acquirer or payment brand requirements.
+
+## Section 19 - Attestation of Compliance (AOC)
+- One version for merchants and one version for SPs
+- The person signing must clearly understand what they are attesting to
+
+Non-compliant entities may need to fill out the "Action Plan for Non-Compliant" section in the AOC
+
+## Section 20 - Compensating Controls
+Four key considerations for compensating controls:
+- Must meet the intent and rogor of the original requirement
+- Must offset the same risk that the original control mitigated
+- Must be above-and-beyond other requirements
+- Must be commensurate with additional risk imposed by not adhering with the original requirements
+
+There needs to be an acceptable technical restraint or business reason to allow noncompliance with a PCI DSS requirement.
+- Not being able to afford the mitagation is a sufficient reason
+
+Existing PCI DSS requirements CANNOT be considered as compensating controls if they are already required for the item under review. But, existing PCI DSS requirements may be combined with new controls to become a compensating control.
+
+Appendix C of the PCI DSS includes the Compensating Controls worksheet
