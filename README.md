@@ -300,7 +300,7 @@ It's a violation to store any of the data to the **right of the service code** o
 A card's chip stores "track-equivalent data", which is like the data stored on the magnetic stripe, but it also has a unique chip CVV/CVC code.
 
 **Storing track data after authorization is not permitted! Even if the data is protected by encryption, masking, scrambling, etc.**
-The only exception is when track data needs to be stored temporarily for troubleshooting purposes. When doing this, they should follow these steps to limit risk:
+The only exception is when track data needs to be stored temporarily by issuers for troubleshooting purposes. When doing this, they should follow these steps to limit risk:
 - Collect SAD only when needed to solve a specific problem
 - Collect the minimum amount of data required
 - Store data in a secure location with limited access
@@ -324,4 +324,49 @@ When checking that card numbers are legitimate, you can use the mod 10 test to v
 Step 1: Double the value of alternate digits beginning with the second digit from the right. For any resulting value >=10, subtract 9
 Step 2: Add the calculated values and the values skipped in Step 1
 Step 3: The total obtained in Step 2 must be divisible by 10
+Here is an example with the card number 4408985500000585:
+
 ![Mod 10 test](mod10.png)
+
+8+4+8+9+8+1+5+5+7+5 = 60, which is divisible by 10, so it is a valid card number.
+
+## Section 14 - Scope of PCI DSS
+Network segmentation is not a PCI DSS requirement, but it is recommended because the entire network is in scope without it. Appendix D in the PCI DSS provides an illustration about how segmentation can help reduce the scope of an assessment.
+
+Examples of system components that may be in scope include, but are not limited to:
+- Systems providing security services, segmentation, or that impact the security of the CDE
+- Virtualization components
+- Network components such as firewalls, switches, routers, wireless access points, network appliances, and other security appliances
+- Servers such as Web, application, database, authentication, mail, proxy, network time protocol (NTP), and domain name system (DNS)
+- Applications including internal and external (for example, Internet) applications
+- Any other component or device located within or connected to the CDE
+
+If virtualization technologies are used in the cardholder data environment, the virtualization technologies are included in scope for PCI DSS.
+
+Here are some of the questions an assessor should ask when scoping an assessment:
+- How many applications store, process or transmit cardholder data?
+- How many databases support the in-scope applications?
+- What database platforms that store credit card data?
+- How many servers store, process or transmit cardholder data to support the in-scope applications?
+- What are the operating systems on the servers?
+- Is there segmentation between the systems storing credit card data and the rest of the network?
+- How many Internet, DMZ, or segmentation firewalls are in place?
+- (If present) How is segmentation achieved (VLAN, Firewall, etc.)?
+- Is wireless technology in use anywhere on the network? If so, how many locations?
+- Is credit card data transmitted over wireless devices at any point?
+- Are credit card transactions accepted through a web server?
+- Are credit card numbers stored on the POS systems for any length of time?
+- How many data centers store, process or transmit cardholder data?
+- How many call centers store, process or transmit cardholder data?
+- Is any part of the environment outsourced?
+- Are there third parties, outsourcers, or business partners connected to the network?
+
+Not understanding how cardholder data is handled is the most common error in PCI DSS scoping. Also remember that encrypted data is not always out of scope.
+
+Scope can be reduced in many ways. The best way is for the merchant to not store any cardholder data. If cardholder data is stored, consider truncation and one-way hashes based on strong cryptography to protect data. Systems that receive cardholder data before it is truncated or hashed, systems that do the truncation or hasing, and systems connected to those systems are all in scope for the assessment.
+
+Entities involved in payment card processing via mobile devices can reduce the risks to the security of cardholder data by encrypting account data at the point of capture using an approved point of interaction device.
+
+## Section 15 - PCI DSS v3.2.1 Six Goals & Twelve Requirements
+
+![6 Goals 12 Requirements](goals-n-reqs.png)
