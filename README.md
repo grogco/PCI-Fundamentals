@@ -462,4 +462,13 @@ The Prioritized Approach reorganizes the PCI DSS requirements into six security 
 
 ![Prioritized Approach](pri-approach.png)
 
+The Council provides a Prioritized Approach Tool in the form of a spreadsheet.
 
+## Section 18 - Report on Compliance (ROC)
+PCI DSS requires detailed documentation in the Report on Compliance. The assessor needs to follow the PCI DSS ROC Reporting Template and completely answer all sections.
+ - Ensure all requirements and testing procedures are addressed in the ROC
+ - Ensure ROC responses address all aspects of the reporting instructions
+ - Keep responses concise and to the point
+ - Details of ROC items marked as being “in place” must not conflict with requirements
+ - Items to be remediated cannot be marked in place until they are implemented and revalidated
+ - Attestation of Compliance (AOC) forms should accompany the completed report, in accordance with either acquirer or payment brand requirements.
