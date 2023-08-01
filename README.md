@@ -294,3 +294,34 @@ Data is broken up into 2 categories:
 PCI DSS applies wherever any of this data is stored, processed, or transmitted.  
 Sensitive Authentication Data (SAD) must **not** be stored by the merchant after authorization.  
 Encrypting any of this data does not necessarily remove it from scope.
+
+It's a violation to store any of the data to the **right of the service code** on the magnetic stripe, because that is where the SAD is stored.
+
+A card's chip stores "track-equivalent data", which is like the data stored on the magnetic stripe, but it also has a unique chip CVV/CVC code.
+
+**Storing track data after authorization is not permitted! Even if the data is protected by encryption, masking, scrambling, etc.**
+The only exception is when track data needs to be stored temporarily for troubleshooting purposes. When doing this, they should follow these steps to limit risk:
+- Collect SAD only when needed to solve a specific problem
+- Collect the minimum amount of data required
+- Store data in a secure location with limited access
+- Encrypt data in transit and when stored
+- Securely delete data when the troubleshooting is complete
+- Verify that the data cannot be retrieved once the troubleshooting is complete
+
+## Section 13 - Making an Inventory
+An inventory of all systems that store, process, or transmit cardholder data must be maintained. The following should be included when making an inventory:
+- System name (includes networking devices)
+- Cardholder data stored (list fields)(if CVC/PIN/track data are stored then that's a RED FLAG)
+- Justification for storing the aforementioned data
+- Data retention period/policy for each type of data
+- Protection mechanisms. May include truncation, one-way hashes, encryption, or compensating controls
+
+Organizations need to identify all locations where cardholder data exists to prevent data leakage and unauthorized disclosure. When searching for any stored track data, look into databases, flat files, logs, debug files, POS systems and servers, and authorization servers.
+
+Systems that commonly store card verification values or code data are authorization servers, web servers, and kiosks. Note that card verification values are not requred for recurring card-not-present transactions.
+
+When checking that card numbers are legitimate, you can use the mod 10 test to validate:  
+Step 1: Double the value of alternate digits beginning with the second digit from the right. For any resulting value >=10, subtract 9
+Step 2: Add the calculated values and the values skipped in Step 1
+Step 3: The total obtained in Step 2 must be divisible by 10
+![Mod 10 test](mod10.png)
