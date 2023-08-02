@@ -280,8 +280,6 @@ The roles and responsibilities of an ISA:
 
 ## Section 12 - Types of Data on a Payment Card
 
-![Card Diagram](Card.png)
-
 Data is broken up into 2 categories:
 **Cardholder Data**
 - Primary Account Number (PAN)
